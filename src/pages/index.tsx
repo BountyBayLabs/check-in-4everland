@@ -12,7 +12,7 @@ const Home = () => (
       <div className="mx-auto flex min-h-screen max-w-3xl flex-col bg-gray-100 round-lg bg-[url('/background.png')] bg-cover bg-center bg-no-repeat">
         <header className="container mx-auto flex w-full max-w-3xl items-center justify-between pb-4 pt-5">
           <div className="flex w-full items-center justify-between">
-            <Link href="/">
+            <Link href="https://recent-deals.vercel.app/">
               <Image
                 src="/back-arrow.png"
                 width={36}
