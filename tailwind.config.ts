@@ -17,7 +17,11 @@ const config: Config = {
         "2xl": "1400px",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   darkMode: ["class"],
   plugins: [nextui()],
