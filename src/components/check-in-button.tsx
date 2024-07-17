@@ -8,16 +8,17 @@ export const CheckInButton: React.FC = () => {
   const [buttonText, setButtonText] = useState("");
 
   useEffect(() => {
-    console.log(tonConnectUI.connected);
-    if (tonConnectUI.connected) {
+    if (tonConnectUI && tonConnectUI.connected) {
       setButtonText("CHECK-IN");
     } else {
       setButtonText("CONNECT WALLET");
+      tonConnectUI.onStatusChange((w) => {
+        setButtonText("CHECK-IN");
+      });
     }
   }, [tonConnectUI?.connected]);
 
   const checkIn = async () => {
-    console.log(tonConnectUI.connected);
     if (tonConnectUI.connected) {
       const address = "EQAjeK7jdhIida6L78_KpOTL4HlY8zOcuqasWkaem1Nv4t1-";
       const amount = (0.008 * Math.pow(10, 9)).toString();
